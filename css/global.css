@@ -661,3 +661,31 @@ section.team .mitarbeiter {
 	font-weight: 700;
 	color: #ababab;
 }
+
+.contact .contact_info {
+	text-align: center;
+
+}
+
+.contact .adress {
+	display: inline-block;
+	text-align: left;
+	margin-right: 90px;
+	margin-bottom: 60px;
+}
+
+.contact .map {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.contact .map a img {
+	max-height: 300px;
+	max-width: 400px;
+}
+
+@media only screen and (min-width: 1000px) {
+	.contact .map a img:hover {
+		filter: brightness(90%);
+	}
+}
