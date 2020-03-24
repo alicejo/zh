@@ -164,9 +164,9 @@ footer a:hover {
 section.area,
 section.contact,
 section.info {
-	-webkit-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1);
-	-moz-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1);
-	box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0px 0px 95px 0px rgba(0, 0, 0, 0.06);
+	-moz-box-shadow: 0px 0px 95px 0px rgba(0, 0, 0, 0.06);
+	box-shadow: 0px 0px 95px 0px rgba(0, 0, 0, 0.06);
 }
 
 #cookie-law {
@@ -193,9 +193,9 @@ header {
 	width: 100%;
 	background-color: #ffffff;
 	z-index: 999;
-	-webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.28);
-	-moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.28);
-	box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.28);
+	-webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.18);
+	-moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.18);
+	box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.18);
 }
 
 .nav-content {
@@ -346,14 +346,13 @@ nav ul li a:hover, nav ul li a.active, nav ul li a:visited:hover, nav ul li a:vi
 	box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Mobile navigation */
-.nav-mobile {
-	display: none;
-	position: absolute;
-	top: 0;
-	right: 0;
-	height: 70px;
-	width: 70px;
+/**/
+/*RESPONSIVE NAV*/
+/**/
+
+ /*Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -362,46 +361,61 @@ nav ul li a:hover, nav ul li a.active, nav ul li a:visited:hover, nav ul li a:vi
 		display: block;
 	}
 
-  .nav-mobile {
-  	display: block;
+	nav {
+		display: block;
+		border-top: 1px solid #d4d4d4;
+	}
+
+	nav .language-selector {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	nav .nav-list li {
+		border-top: 1px solid #d4d4d4;
+	}
+
+	nav .nav-list li:first-child {
+		border-top: none;
+	}
+
+	nav .nav-list li:last-child {
+		padding: 12px 0 31px 16px !important;
+	}
+
+	/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+  .topnav li {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
   }
 
-  nav {
+	/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+	.topnav.responsive {position: relative;}
+
+	.topnav.responsive a.menu-icon {
+	  background-image: url(../assets/img/close.png);
+	}
+
+	.topnav a.menu-icon {
+		background-image: url(../assets/img/hamburger.png);
+		z-index: 999;
+	}
+
+	.topnav.responsive a.menu-icon,
+	.topnav a.menu-icon {
+	  height: 32px;
+    width: 32px;
+    content: ' ';
+    background-size: contain;
+    margin-top: 26px;
+	}
+
+	.topnav.responsive li {
+	  float: none;
 	  display: block;
-  	width: 100%;
+	  text-align: left;
 	}
-  
-  nav ul.language-selector {
-  	text-align: right;
-  	padding-top: 1em;
-  	margin-top: 1em;
-  	border-top: 1.6px solid #e1e1e1;
-	}
-  
-  nav ul.language-selector li {
- 	 display: inline-block;
-  	border-bottom: none;
-	}
-  
-  nav ul.nav-list li {
-  	border-bottom: 1.5px solid #e1e1e1;
-  }
-
-  nav ul.nav-list li:first-child {
-  	padding: 0 16px 12px 16px;
-  }
-
-  nav ul {
-  	display: none;
-  }
-
-  nav ul li {
-  	float: none;
-  }
-
-  .nav-dropdown {
-  	position: static;
-  }
 
   .area .technical_areas {
   	display: block !important;
@@ -414,59 +428,9 @@ nav ul li a:hover, nav ul li a.active, nav ul li a:visited:hover, nav ul li a:vi
 	}
 }
 
-#nav-toggle {
-	position: absolute;
-	left: 18px;
-	top: 31px;
-	cursor: pointer;
-	padding: 10px 35px 16px 0px;
-}
-
-#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
-	background-color: #ababab;
-	cursor: pointer;
-	border-radius: 1px;
-	height: 5px;
-	width: 35px;
-	position: absolute;
-	display: block;
-	content: '';
-	transition: all 300ms ease-in-out;
-}
-
-#nav-toggle span:before {
-	top: -10px;
-}
-
-#nav-toggle span:after {
-	bottom: -10px;
-}
-
-#nav-toggle.active span {
-	background-color: transparent;
-}
-
-#nav-toggle.active span:before, #nav-toggle.active span:after {
-	top: 0;
-}
-
-#nav-toggle.active span:before {
-	transform: rotate(45deg);
-}
-
-#nav-toggle.active span:after {
-	transform: rotate(-45deg);
-}
-
 section.about article {
 	text-align: center;
 	max-width: 700px;
-}
-
-section.area, section.contact {
-	-webkit-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1);
-	-moz-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1);
-	box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1);
 }
 
 .area .technical_areas {
@@ -607,8 +571,23 @@ section.team ul li {
 	margin: 1em 2em 2.3em;
 }
 
+section.team ul li a {
+	text-decoration: none;
+}
+
+section.team ul li img {
+	margin: 4px;
+}
+
+section.team ul li a img:hover {
+	width: 183px;
+	height: 183px;
+	margin: 0;
+}
+
 section.team ul li h3 {
 	font-size: 1em;
+	color: initial;
 	margin-bottom: 0;
 }
 
@@ -618,8 +597,9 @@ section.team ul li p {
 	margin-bottom: 0;
 }
 
-section.team ul li a {
+section.team ul li h4 {
 	display: inline-block;
+	text-decoration: underline;
 	font-size: 0.85em;
 	margin-top: 0.5em;
 	color: #7e7e7e;
