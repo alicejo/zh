@@ -52,7 +52,18 @@ h1 span {
 	line-height: 1.4;
 	font-size: 0.5em;
 	margin-top: 0.3em;
-	width: 500px;
+}
+
+@media only screen and (min-width: 700px) {
+	h1 span {
+		width: 500px;
+	}
+}
+
+@media only screen and (max-width: 390px) {
+	h1 {
+		font-size: 2em;
+	}
 }
 
 h2 {
@@ -294,6 +305,7 @@ nav {
 }
 
 nav ul.language-selector li a {
+	font-size: 1.02em;
 	padding: 12px 12px;
 }
 
@@ -687,5 +699,13 @@ section.team .mitarbeiter {
 @media only screen and (min-width: 1000px) {
 	.contact .map a img:hover {
 		filter: brightness(90%);
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.contact .map a img {
+		max-height: none;
+		max-width: none;
+		width: 100%;
 	}
 }
