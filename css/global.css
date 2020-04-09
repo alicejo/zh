@@ -83,6 +83,12 @@ h2:before, h2:after {
 	margin: 0 0.7em;
 }
 
+@media only screen and (max-width: 500px) {
+	h2:before, h2:after {
+		width: 1em;
+	}	
+}
+
 p {
 	font-size: 1em;
 	line-height: 1.5;
@@ -655,6 +661,22 @@ section.team .mitarbeiter {
 
 .profile ul {
 	list-style: inside;
+}
+
+.profile dl {
+	display: grid;
+  grid-template-columns: max-content auto;
+  margin-top: 3em;
+}
+
+.profile dt {
+	grid-column-start: 1;
+	font-weight: bold;
+	margin-bottom: 1.2em;
+}
+
+.profile dd {
+	grid-column-start: 2;
 }
 
 .contact h3, .contact h4 {
