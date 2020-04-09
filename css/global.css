@@ -663,6 +663,22 @@ section.team .mitarbeiter {
 	list-style: inside;
 }
 
+.profile dl {
+	display: grid;
+  grid-template-columns: max-content auto;
+  margin-top: 3em;
+}
+
+.profile dt {
+	grid-column-start: 1;
+	font-weight: bold;
+	margin-bottom: 1.2em;
+}
+
+.profile dd {
+	grid-column-start: 2;
+}
+
 .contact h3, .contact h4 {
 	color: #ababab;
 }
