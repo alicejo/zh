@@ -583,6 +583,15 @@ section.team h4 {
 	margin-bottom: 1.7em;
 }
 
+section.team ul li h5 {
+	color: #b4b4b4;
+	font-size: 0.7em;
+	font-weight: normal;
+	margin-top: -4px;
+	margin-bottom: -10px;
+
+}
+
 section.team ul li {
 	display: inline-block;
 	vertical-align: top;
@@ -619,8 +628,9 @@ section.team ul li h4 {
 	display: inline-block;
 	text-decoration: underline;
 	font-size: 0.85em;
-	margin-top: 0.5em;
+	margin-top: 1em;
 	color: #7e7e7e;
+	text-transform: none;
 }
 
 section.team .mitarbeiter {
