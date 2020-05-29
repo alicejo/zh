@@ -572,6 +572,13 @@ section.about article {
 	background-image: url(../assets/img/area-icons/telekommunikation.png);
 }
 
+@media screen and (max-width: 650px) {
+	.area ul {
+		margin-bottom: -1.6em;
+		margin-top: 0;
+	}
+} 
+
 section.team {
 	text-align: center;
 }
